@@ -1,0 +1,39 @@
+# NAME: Talkatone
+# DESC: Talkatone 分流规则 / Quantumult X filter_remote 专用
+# 语法: Quantumult X 原生 (host-keyword / host-suffix / ip-cidr)
+# 说明: 行尾的 Talkatone 是占位策略名
+#       若 filter_remote 里写了 force-policy=xxx，会被自动覆盖，无需改本文件
+
+# >>> 核心业务域名 <<<
+host-keyword, talkatone, Talkatone
+host-suffix, talkatone.com, Talkatone
+host-suffix, talkamobile.com, Talkatone
+host-suffix, tktn.at, Talkatone
+host-suffix, tktn.be, Talkatone
+host-suffix, tktn.me, Talkatone
+host-suffix, cnt.tktn.be, Talkatone
+
+# >>> 人机安全验证（不代理会卡 Security Check）<<<
+host-suffix, hcaptcha.com, Talkatone
+
+# >>> 媒体资源 <<<
+host-suffix, media.tenor.com, Talkatone
+
+# >>> XMPP 信令集群：美西 / 美中 / 美东 <<<
+ip-cidr, 23.19.73.0/24, Talkatone, no-resolve
+ip-cidr, 72.18.158.0/24, Talkatone, no-resolve
+ip-cidr, 23.235.228.0/24, Talkatone, no-resolve
+ip-cidr, 216.172.154.0/24, Talkatone, no-resolve
+
+# >>> 通话 / 短信专线 <<<
+ip-cidr, 50.117.27.0/24, Talkatone, no-resolve
+ip-cidr, 63.251.124.0/24, Talkatone, no-resolve
+ip-cidr, 69.46.75.0/24, Talkatone, no-resolve
+ip-cidr, 104.244.53.0/24, Talkatone, no-resolve
+ip-cidr, 131.153.5.0/24, Talkatone, no-resolve
+ip-cidr, 131.153.7.0/24, Talkatone, no-resolve
+ip-cidr, 198.24.160.0/24, Talkatone, no-resolve
+ip-cidr, 198.24.161.0/24, Talkatone, no-resolve
+ip-cidr, 198.24.163.0/24, Talkatone, no-resolve
+ip-cidr, 198.24.183.0/24, Talkatone, no-resolve
+ip-cidr, 205.164.56.0/24, Talkatone, no-resolve
